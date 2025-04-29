@@ -1,0 +1,293 @@
+/* Darkmode colour pallatte
+✔️ Background: #121212 (Deep Black)
+✔️ Card/Section Background: #1E1E1E (Dark Grey)
+✔️ Primary Text: #E0E0E0 (Light Grey)
+✔️ Secondary Text: #A0A0A0 (Muted Grey)
+✔️ Accent (Buttons/Links): #00ADB5 (Teal) or #FF4C29 (Bright Orange)
+✔️ Success: #4CAF50 (Green)
+✔️ Warning: #FF9800 (Orange)
+✔️ Error: #FF3D57 (Red) */
+:root {
+    --font-small: 1rem;
+    --font-medium: 1.5rem;
+    --font-large: 2rem;
+}
+html
+{
+     font-family: "Electrolize", serif;
+     font-weight: 400;
+     font-style: normal;
+     overflow-x: hidden;
+     width: 100%;
+}
+/* General Styles */
+body
+ {
+     font-family: "Electrolize", serif;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+
+ }
+ 
+ /* Navbar */
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+     background: #333;
+     color: white;
+ }
+ 
+ .logo {
+     font-size: 22px;
+     font-weight: bold;
+ }
+ 
+ .nav-links {
+     list-style: none;
+     display: flex;
+     gap: 40px;
+ }
+ 
+ .nav-links li {
+     display: inline;
+ }
+ 
+ .nav-links a {
+     color: white;
+     text-decoration: none;
+     font-size: 18px;
+ }
+ 
+ /* Mobile Menu */
+ .menu-toggle {
+     display: none;
+     font-size: 24px;
+     cursor: pointer;
+ }
+ 
+ /* Hero Section */
+ .hero {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     align-content: center;
+     height: 60vh;
+     background: #121212 ;
+     color: white;
+     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+     gap: 20px;
+     padding: 50px;
+     margin: auto;
+ }
+ 
+ .hero-text {
+    flex:1;
+ }
+ .hero-image {
+    flex: 1; 
+    text-align: center;
+}
+
+.hero-image img
+{
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+ .btn {
+     display: inline-block;
+     padding: 10px 20px;
+     background: red;
+     color: white;
+     text-decoration: none;
+     font-size: 18px;
+     margin-top: 10px;
+     border-radius: 5px;
+ }
+/* projects section*/
+#p1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    height: 50vh;
+    background: #121212 ;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: fit-content; /* Shrinks to image width */
+    max-height: fit-content;
+}
+
+#Projects-image{
+    display: inline-block;
+   flex:1;
+   max-width: fit-content; /* Shrinks to image width */
+    max-height: fit-content;
+}
+#Projects-text{
+   flex: 1.50; 
+   text-align: center;
+   max-width: fit-content; /* Shrinks to image width */
+    max-height: fit-content;
+}
+
+#Projects-image img
+{
+   width: 100%;
+   max-width: 500px;
+   height: auto;
+   border-radius: 10px;
+}
+ 
+
+/* Connect with me */
+.form
+{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: auto;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #121212;
+}
+#cnname
+{
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: auto;
+    justify-content: space-around;
+    align-items:center;
+}
+#name
+{
+    display: flex;
+    height: 50%;
+    width: auto;
+}
+#cnmail
+{
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    width: auto;
+    justify-content: space-around;
+    align-items:center;
+}
+#cnmessage
+{
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    height: 12vh;
+    width: auto;
+    justify-content:space-around;
+    align-items:center;
+}
+
+
+/* Responsive Boxes */
+ .container
+{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 20px;
+     padding: 20px;
+     background-color: #121212;
+ }
+ 
+ 
+ .box {
+     background: #1E1E1E;
+     padding: 20px;
+     font-size: 20px;
+     border-radius: 5px;
+     color: #E0E0E0;
+ }
+
+
+ /* Responsive Breakpoints */
+@media (max-width: 768px) 
+{
+    :root 
+    {
+        --font-small: 0.8rem;
+        --font-medium: 1.1rem;
+        --font-large: 1.5rem;
+    }
+    body
+    {
+        font-size:small;
+    }
+    .nav-links 
+    {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .hero
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-image
+    {
+        width: 100%;
+    }
+    .nav-links.active 
+    {
+        display: flex;
+    }
+ 
+    .menu-toggle 
+    {
+        display: block;
+    }
+    #p1
+    {
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+    }
+ }
+ 
+@media (max-width: 480px) 
+{
+    :root 
+    {
+        --font-small: 10px;
+        --font-medium: 1rem;
+        --font-large: 1.3rem;
+    }
+    html
+    {
+        font-size:var(--font-small);
+    }
+    .hero 
+    {
+        height: 50vh;
+    }
+    .btn 
+    {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+ }
+ 
+

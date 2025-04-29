@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head Start -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Biren's Portfolio</title>
+  </head>
+  <!-- Head End -->
+  <!-- Body Start -->
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">MyWebsite</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-image">    
+        <img src="./IMG_5486.jpg" class="personalimg">
+      </div>
+      <div class="hero-text">
+          <h1>Hello, I am Biren Badrakiya</h1>
+          <p>A full-Stack Web-Developer who loves to Learn and Build new things.</p>
+          <a href="#" class="btn">Learn More</a>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <!-- Projects -->
+    <section class="container" id="Projects">
+     <div class="box" >
+      <h1>This is Projects</h1>
+      <div class="box" id="p1">
+          <div class="box" id="Projects-image">
+            <img src="./images/exproject.png" />
+          </div>
+          <div class="box" id="Projects-text">            
+            <p>
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi lacus fringilla laoreet; 
+              quis ridiculus nec elementum feugiat neque. Pulvinar imperdiet etiam litora feugiat ligula maecenas purus amet. 
+              Libero hendrerit viverra hac lacus nisl. Rutrum fusce morbi orci at semper dolor proin ipsum feugiat. Enim donec 
+              netus adipiscing orci himenaeos nisi porta inceptos.Suscipit felis magna nullam,mus sollicitudin praesent porttitor. 
+            </p>
+          </div>
+      </div>
+      <div class="box" id="p1">
+        <div class="box" id="Projects-image">
+          <img src="./images/exproject.png" />
+        </div>
+        <div class="box" id="Projects-text">            
+          <p>
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Morbi lacus fringilla laoreet; 
+            quis ridiculus nec elementum feugiat neque. Pulvinar imperdiet etiam litora feugiat ligula maecenas purus amet. 
+            Libero hendrerit viverra hac lacus nisl. Rutrum fusce morbi orci at semper dolor proin ipsum feugiat. Enim donec 
+            netus adipiscing orci himenaeos nisi porta inceptos.Suscipit felis magna nullam,mus sollicitudin praesent porttitor. 
+          </p>
+        </div>
+    </div>
+     </div>
+    </section>
+    <!-- Projects End -->
+    <section class="container" id="About">
+     <div class="box" id="About">
+          <h1>About Me!</h1>
+          <div class="box">
+            <h1>Its my introduction</h1>
+          </div>
+     </div>
+     
+    </section>
+    <section class="container" id="Contact">
+     <div class="box">
+          <h1>Connect with Me?</h1>
+          <form class="form">
+          <div id="cnname">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required><br />
+          </div>
+          <div id="cnmail">
+            <label for="name">Email:</label>
+            <input type="email" id="email" name="Email" required><br />
+          </div>
+          <div id="cnmessage">
+            <label for="message">Enter Message:</label>
+            <textarea  id="Message" name="message" rows="5" >Type your message Here..</textarea><br />
+          </div>
+          <input type="submit" value="Submit" class="btn"/>
+          </form>
+     </div>
+    </section>
+  </body>
+  <!-- Script Start -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    const textarea = document.getElementById("Message");
+    textarea.addEventListener('focus', function() {
+    textarea.value = '';
+    textarea.readOnly = false;
+    textarea.style.color = '#000'; 
+  });
+  </script>
+</html>
